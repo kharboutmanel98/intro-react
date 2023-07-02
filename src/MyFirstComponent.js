@@ -5,14 +5,25 @@ export default function MyFirstComponent() {
         name: "Manel",
         age: 24
     }
+
+    const elementStyle = {
+        backgroundColor: "cyan",
+        fontSize: "20px",
+        boxShadow: "0px 20px 10px"
+    }
   return (
   <div>
       <div>
-        <h1>{person.age}</h1>
-        <h2>Hi</h2>
-        <button>Click me</button>
+        <h1 style={elementStyle}>{person.name}</h1>
+        <h3>{person.age}</h3>
+        <h2 style={{backgroundColor: "green"}}>Hi</h2>
+        <button onClick={sayHello}>Click me</button>
       </div>
       <div></div>
   </div>
   );
 } 
+
+function sayHello() {
+    return "hello";
+}
